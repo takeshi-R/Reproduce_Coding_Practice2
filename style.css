@@ -1,0 +1,739 @@
+@charset "utf-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ここから */
+body {
+    background: linear-gradient(#F7DB8F,#F6CE97);
+    margin: 0;
+}
+.container {
+    width: 1007px;
+    /* height: 878px; */
+    margin: 0 auto;
+    padding: 0 1%;
+}
+.container h1 {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    font-size: 5em;
+    line-height: 120px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5em;
+    /* margin-top: 0.5em; */
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.key_visual {
+    width: 700px;
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-around;
+}
+.key_visual2 {
+    width: 350px;
+    height: 200px;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 35px 30px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+}
+.key_visual2::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 80px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 15px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+.key_visual2 p span {
+    color: #F6CD98;
+}
+.key_visual2 p:last-child{
+    text-align: end;
+}
+
+@media (min-width:1024px) {
+    .box {
+        /* width: 700px; */
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 auto;
+    }
+    .box a {
+        text-decoration: none;
+        color: #212121;
+        display: block;
+        cursor: pointer;
+    }
+    .box4 {
+        width: 800px;
+        height: 60px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .modalOpen {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 2px 4px 4px #af956a;
+        float: left;
+    }
+    .modalOpen01 {
+        display: inline-block;
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 2px 4px 4px #af956a;
+        margin-left: 62%;
+    }
+    .modal, .modal01 {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        background: #fff;
+        width: 80%;
+        height: 85%;
+        border-radius: 15px;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal01.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal h2, .modal01 h2 {
+        font-size: 24px;
+        font-weight: 400;
+        padding: 34px;
+    }
+    .modal dl dt, .modal01 dl dt {
+        font-weight: 400;
+        background: #F7DB8F;
+        color: #fff;
+        border-radius: 5px;
+        padding: 12px 15px;
+        margin: 7px 15px 7px 30px;
+        float: left;
+        clear: both;
+        width: 16%;
+    }
+    .modal dl dd, .modal01 dl dd {
+        font-weight: 400;
+        float: left;
+        padding: 15px;
+    }
+    .modalClose {
+        font-weight: 600;
+        border: 1px solid #212121;
+        box-shadow: 2px 5px 4px #cccccc;
+        border-radius: 15px;
+        line-height: 3.3;
+        text-align: center;
+        margin: 320px auto;
+        cursor: pointer;
+        width: 300px;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .mask.active {
+        opacity: 0.5;
+        visibility: visible;
+    }
+    
+    .box2 {
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        background: #55ACEE;
+        border-radius: 15px;
+        box-shadow: 2px 4px 4px #B69A70;
+        margin: 100px auto;
+    }
+    .box2 a {
+        color: #fff;
+    }
+    .fa-twitter {
+        padding-right: 20px;
+        font-size: 19px;
+    }
+}
+@media (min-width:889px) and (max-width:1023px) {
+    .container {
+        width: 889px;
+        padding: 0;
+    }
+    .box {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        width: 889px;
+        height: 390px;
+    }
+    .box a {
+        display: block;
+        text-decoration: none;
+        color: #212121;
+        font-weight: 600;
+        cursor: pointer;
+    }
+   
+    .box4 {
+        height: 185px;
+    }
+    .modalOpen {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+    }
+    .modalOpen01 {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+    }
+    .modal, .modal01 {
+        position: fixed;
+        top: 7%;
+        left: 14%;
+        background: #fff;
+        width: 73%;
+        height: 82%;
+        border-radius: 15px;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal01.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal h2, .modal01 h2 {
+        font-size: 24px;
+        font-weight: 400;
+        padding: 34px;
+    }
+    .modal dl dt, .modal01 dl dt {
+        font-weight: 400;
+        background: #F7DB8F;
+        color: #fff;
+        border-radius: 5px;
+        padding: 12px 15px;
+        margin: 7px 15px 7px 30px;
+        float: left;
+        clear: both;
+        width: 16%;
+    }
+    .modal dl dd, .modal01 dl dd {
+        font-weight: 400;
+        float: left;
+        padding: 15px;
+    }
+    .modalClose {
+        font-weight: 600;
+        border: 1px solid #212121;
+        box-shadow: 2px 5px 4px #cccccc;
+        border-radius: 15px;
+        line-height: 3.5;
+        margin: 325px 145px 70px 210px;
+        cursor: pointer;
+        width: 45%;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .mask.active {
+        opacity: 0.5;
+        visibility: visible;
+    }
+    .box2 {
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        background: #55ACEE;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px #a08863;
+        margin: 60px auto;
+    }
+    .box2 a {
+        display: block;
+        color: #fff;
+    }
+    .box2 i {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:888px) {
+    .container {
+        width: 768px;
+    }
+    .box {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        width: 768px;
+        height: 390px;
+    }
+    .box a {
+        display: block;
+        text-decoration: none;
+        color: #212121;
+        font-weight: 600;
+        cursor: pointer;
+    }
+   
+    .box4 {
+        height: 185px;
+    }
+    .modalOpen {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+    }
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background-color: #fff;
+        z-index: 2; 
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 20px;
+        min-width: 70%;
+        min-height: 55%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modalOpen01 {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+    }
+    .modal01 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background-color: #fff;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 20px;
+        min-width: 80%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .modal01.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal h2, .modal01 h2 {
+        font-weight: 400;
+        font-size: 24px;
+        padding: 20px;
+    }
+    .modal dl dt {
+        font-weight: 400;
+        background: #F7DB8F;
+        color: #fff;
+        border-radius: 5px;
+        padding: 11px 15px;
+        margin: 7px;
+        float: left;
+        clear: both;
+        width: 25%;
+    }
+    .modal01 dl dt {
+        font-weight: 400;
+        background: #F7DB8F;
+        color: #fff;
+        border-radius: 5px;
+        padding: 11px 15px;
+        margin: 7px;
+    }
+    .modal dl dd {
+        font-weight: 400;
+        float: left;
+        padding: 15px;
+    }
+    .modal01 dl dd {
+        font-weight: 400;
+        padding: 15px;
+        text-align: left;
+    }
+    .modalClose {
+        font-weight: 400;
+        border: 1px solid #212121;
+        box-shadow: 2px 5px 4px #cccccc;
+        border-radius: 15px;
+        line-height: 3.3;
+        text-align: center;
+        margin: 325px 145px 70px;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .mask.active {
+        opacity: 0.6;
+        visibility: visible;
+    }
+    .box2 {
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        background: #55ACEE;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px #a08863;
+        margin: 60px auto;
+    }
+    .box2 a {
+        display: block;
+        color: #fff;
+    }
+    .box2 i {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width:767px) {
+    .container {
+        width: 100%;
+    }
+    .container2 {
+        width: 100%;
+    }
+    .key_visual {
+        display: block;
+        width: 100%;
+    }
+    .key_visual img  {
+        display: block;
+        margin: 30px auto;
+    }
+    .key_visual2 {
+        display: inline-block;
+        width: 100%;
+        padding: 35px 30px;
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: 20px;
+        position: relative;
+        font-weight: bold;
+    }
+    .key_visual2::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -25px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-right: 35px solid transparent;
+        border-bottom: 35px solid #fff;
+        border-left: 35px solid transparent;
+    }
+    .box {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        height: 390px;
+    }
+    .box a {
+        display: block;
+        text-decoration: none;
+        color: #212121;
+        font-weight: 600;
+        cursor: pointer;
+    }
+   
+    .box4 {
+        height: 185px;
+    }
+    .modalOpen {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+        cursor: pointer;
+    }
+    .modalOpen01 {
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px rgb(158 135 100);
+        margin: 40px auto;
+    }
+    .modal, .modal01 {
+        position: fixed;
+        left: 50%;
+        background-color: #fff;
+        z-index: 2; 
+        transform: translate(-50%, -133%);
+        padding: 20px;
+        border-radius: 20px;
+        min-width: 80%;
+        min-height: 75%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal01 {
+        position: fixed;
+        top: 95%;
+        left: 50%;
+        background-color: #fff;
+        z-index: 2; 
+        transform: translate(-50%, -133%);
+        padding: 20px;
+        border-radius: 20px;
+        min-width: 80%;
+        min-height: 45%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .modal01.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal h2, .modal01  h2 {
+        font-weight: 400;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .modal dl dt, .modal01 dl dt {
+        font-weight: 400;
+        background: #F7DB8F;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px;
+    }
+    .modal dd, .modal01 dd {
+        font-weight: 400;
+        padding: 20px 5px;
+        text-align: start;
+    }
+    .modalClose {
+        font-weight: 400;
+        border: 1px solid #212121;
+        border-radius: 15px;
+        margin: 60px;
+        box-shadow: 2px 5px 2px #ccc;
+        line-height: 3;
+        cursor: pointer;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }.mask.active {
+        opacity: 0.6;
+        visibility: visible;
+    }
+    .box2 {
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        background: #55ACEE;
+        border-radius: 20px;
+        box-shadow: 2px 4px 4px #a08863;
+        margin: 60px auto;
+    }
+    .box2 a {
+        display: block;
+        color: #fff;
+    }
+    .box2 i {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+}
