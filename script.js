@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 document.getElementById("modalOpen").addEventListener("click", function() {
   document.getElementById("modal").classList.add("active");
