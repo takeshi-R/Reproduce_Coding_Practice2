@@ -1,18 +1,21 @@
 'use strict';
+const modalElement = document.getElementById("modal")
+const maskElement = document.getElementById("mask")
+const modal01Element = document.getElementById("modal01")
 
 document.getElementById("modalOpen").addEventListener("click", function() {
-  document.getElementById("modal").classList.add("active");
-  document.getElementById("mask").classList.add("active");
+  modalElement.classList.add("active");
+  maskElement.classList.add("active");
 })
 document.getElementById("modalClose").addEventListener("click", function() {
-  document.getElementById("modal").classList.remove("active");
-  document.getElementById("mask").classList.remove("active");
+  modalElement.classList.remove("active");
+  maskElement.classList.remove("active");
 })
 document.getElementById("modalOpen01").addEventListener("click", function() {
-  document.getElementById("modal01").classList.add("active");
-  document.getElementById("mask").classList.add("active");
+  modal01Element.classList.add("active");
+  maskElement.classList.add("active");
 })
 document.getElementById("modalClose01").addEventListener("click", function() {
-  document.getElementById("modal01").classList.remove("active");
-  document.getElementById("mask").classList.remove("active");
+  modal01Element.classList.remove("active");
+  maskElement.classList.remove("active");
 })
